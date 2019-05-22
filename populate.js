@@ -59,6 +59,7 @@ module.exports.updateHTML = (username, sort, order, includeFork) => {
                         repos = repos.concat(tempRepos);
                     } while(tempRepos.length == 100);
                 }
+                repos = repos.filter(repo => !repo.archived).filter(repo => !repo.private)
                 for (var i = 0; i < repos.length; i++) {
                     if(repos[i].fork == false){
                         document.getElementById("work_section").innerHTML += `

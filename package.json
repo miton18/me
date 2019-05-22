@@ -5,7 +5,8 @@
   "main": "build.js",
   "scripts": {
     "clean": "rm -f dist/index.*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build --name miton18 --sort star --theme light --order desc && cp -R ./dist/* ./docs"
   },
   "author": "imfunny",
   "license": "ISC",
